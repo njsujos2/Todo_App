@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Todo App</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="todo-container">
+        <h2>UPDATE</h2>
+        <div class="todo">
+            <form method="POST" class="todo-header">
+
+                <% data.forEach(element => { %>
+                <% if(element._id == id_equal) {%>
+                    
+                    <input type="text" name="content" placeholder=" <%= element.content %> " />
+                    
+                <% }}) %>
+
+                <button type="submit"><i class="fas fa-check-circle"></i></button>
+            </form>
+            <ul class="todo-list">
+            </ul>
+        </div>
+    </div>
+</body>
